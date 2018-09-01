@@ -1,0 +1,50 @@
+<ion-header>
+        <ion-navbar>
+            <button ion-button menuToggle color="light" style="border:1px solid white;">
+                <ion-icon name="ios-menu-outline"></ion-icon>
+            </button>
+            <ion-title >
+                Airxons Wallet
+            </ion-title>
+        </ion-navbar>
+    </ion-header>
+
+
+
+<ion-content id="welcome" fullscreen="true">
+
+       <div id="image-icon">
+            <img src="assets/img/logo.png" alt="airx logo" width="150">
+       </div>
+
+       <div id="login-btn">
+            <button ion-button  color="light" on-click="goToLoginPage()" style="border:1px solid white;color:white;" clear>Login</button>
+       </div>
+       <div id="sign-btn">
+            <button ion-button color="light" on-click="goToSignup()" style="border:1px solid white;color:white;" clear>Create Wallet</button>
+       </div>
+         
+   <ion-slides pager  autoplay="3000" loop="true" speed="700" > 
+         
+                <ion-slide  class="swiper-no-swiping" style="background:black;color:white">
+                    <div class="cover">
+                	  	<h4 class="cover-text" style="left:17%">Send And Recieve AIRX</h4>
+                	</div>
+                </ion-slide>
+          
+                <ion-slide class="swiper-no-swiping" style="background:black;color:white">
+                	<div class="cover">
+                	 	<h4 class="cover-text">Advertise Your Brand On Airxons with AIRX</h4>
+                	</div>
+                </ion-slide>
+ 
+
+                <ion-slide class="swiper-no-swiping" style="background:black;color:white">
+                	<div class="cover">
+                        <h4 class="cover-text">Earn AIRX By Searching, Writing/Sharing, Harvesting, Trading</h4>
+                    </div>
+                </ion-slide>
+
+          
+      </ion-slides>
+</ion-content>

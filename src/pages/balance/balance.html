@@ -1,5 +1,5 @@
 <ion-header>
-    <ion-navbar color="light" hideBackButton="true">
+    <ion-navbar color="dark" hideBackButton="true">
         <button ion-button menuToggle class="force-display">
             <ion-icon name="ios-menu-outline"></ion-icon>
         </button>
@@ -22,12 +22,17 @@
     <form>
 
         <ion-list radio-group [(ngModel)]="selectedMosaic" name="selected-mosaic">
-            <ion-item *ngFor="let mosaic of balance">
+            <ion-item *ngFor="let mosaic of balance" style="background:black;border-bottom:1px solid white;color:white;">
                 <ion-radio [value]="mosaic"></ion-radio>
 
-                <ion-label><b>
-                    {{ mosaic.amount }}</b>
+                <ion-label style="color:white">
                     {{ mosaic.mosaicId.description() }}
+                    &nbsp; &nbsp; &nbsp;
+            
+                      <button ion-button  
+                        on-click="goToTransfer()" [disabled]="!selectedMosaic" style="background:darkgreen;height:20px;">
+                        <b> {{ mosaic.amount }}</b>
+                      </button>
                 </ion-label>
 
             </ion-item>
@@ -40,20 +45,35 @@
 
 
 <ion-footer no-shadow>
-    <ion-toolbar position="bottom" class="background-white">
+    <ion-toolbar position="bottom" style="background:black;">
         <div class="row">
-            <div class="col col-50">
-                <button ion-button block color="positive"
-                        on-click="goToTransfer()" [disabled]="!selectedMosaic">
-                    {{'TRANSFER_BUTTON' | translate}}
+            <div class="col col-30">
+                <button ion-button block color="light"
+                        on-click="goToTransfer()" [disabled]="!selectedMosaic" style="border:1px solid white; padding:1px !important;" clear>
+                        {{'TRANSFER'|translate}}
+                         &nbsp;
+                        <ion-icon ios="ios-send" name="send"></ion-icon>
                 </button>
             </div>
-            <div class="col col-50">
-                <button ion-button block color="secondary"
-                        on-click="goToReceive()" [disabled]="!selectedMosaic">
-                    {{'RECEIVE_BUTTON' | translate}}
-                </button>
+
+            <div class="col col-30">
+                    <button ion-button block color="light"
+                            on-click="goToTransaction()"  style="border:1px solid white; padding:1px !important;" clear>
+                            Transx
+                            &nbsp;
+                             <ion-icon ios="logo-buffer" md="logo-buffer"></ion-icon>
+                    </button>
             </div>
+
+            <div class="col col-30">
+                    <button ion-button block color="light"
+                            on-click="goToReceive()" [disabled]="!selectedMosaic" style="border:1px solid white; padding:1px !important;" clear>
+                            {{'RECIEVE'|translate}}
+                            &nbsp;
+                            <ion-icon ios="ios-redo" md="md-redo"></ion-icon>
+                    </button>
+            </div>
+           
         </div>
     </ion-toolbar>
 </ion-footer>

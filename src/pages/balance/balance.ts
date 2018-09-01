@@ -12,6 +12,8 @@ import {ReceivePage} from '../receive/receive';
 
 import {LoginPage} from '../login/login';
 
+import {TransactionsPage} from '../transactions/transactions';
+
 import {Wallet, MosaicTransferable} from 'nem-library';
 
 @Component({
@@ -81,6 +83,13 @@ export class BalancePage {
         this.navCtrl.push(ReceivePage, {
             selectedMosaic: this.selectedMosaic
         });
+    }
+
+    /** 
+     * Moves to Transctions
+     */
+    goToTransaction(){
+        this.navCtrl.push(TransactionsPage);
     }
 
 }

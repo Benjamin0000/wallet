@@ -1,5 +1,5 @@
 <ion-header>
-    <ion-navbar color="light">
+    <ion-navbar color="dark">
         <button ion-button menuToggle>
             <ion-icon name="menu"></ion-icon>
         </button>
@@ -10,31 +10,36 @@
 </ion-header>
 <ion-content id="receive" padding >
     <div class="default-padding">
-        <div id="invoiceInfoQR"><img [src]="qrCode.src"></div>
-
-        <ion-item id="transfer-input1">
+        <div id="invoiceInfoQR" ><img [src]="qrCode.src"></div>
+        <br>
+        <div style="color:white;text-align:center">
+             <h3 style="color:white;text-align:center"> Your Address</h3>
+             {{selectedWallet?.address.pretty()}}      
+        </div>
+        <br>
+        <br>
+        <ion-item id="transfer-input1" style="background:black;color:white;">
             <ion-label>
                 {{'RECIPIENT_ADDRESS' | translate}}
             </ion-label>
-            <ion-label>
-                {{selectedWallet?.address.pretty()}}
-            </ion-label>
+
+            <ion-input type="text" value="{{selectedWallet?.address.pretty()}} "></ion-input>
         </ion-item>
 
-        <ion-item>
+        <ion-item style="background:black;color:white;">
             <ion-label>
                 {{'AMOUNT' | translate}}
             </ion-label>
             <ion-input type="number" min="0" name="amount" [(ngModel)]="amount" placeholder="" (ngModelChange)="updateQR()"></ion-input>
         </ion-item>
 
-        <ion-item>
+        <ion-item style="background:black;color:white;">
             <ion-label>
                 {{selectedMosaic.mosaicId.description()}}
             </ion-label>
         </ion-item>
 
-        <ion-item>
+        <ion-item style="background:black;color:white;">
             <ion-label stacked>
                 {{'MESSAGE' | translate}}
             </ion-label>

@@ -1,5 +1,5 @@
 <ion-header>
-    <ion-navbar color="light">
+    <ion-navbar color="dark">
         <button ion-button menuToggle>
             <ion-icon name="ios-menu-outline"></ion-icon>
         </button>
@@ -15,13 +15,13 @@
         <div id="accountInfoQR"><img [src]="qrCode.src"></div>
 
         <!-- ADDRESS -->
-
+       <br>
         <div id="address">
-            <h1 class="black-color">
+            <h1 class="" style="text-align:center">
                 {{'YOUR_ADDRESS' | translate }}
             </h1>
-
-            <p class="black-color">
+            
+            <p class=""  style="text-align:center">
                 {{selectedWallet?.address.pretty()}}
             </p>
 
@@ -38,12 +38,12 @@
             <h2>
                 {{'PRIVATE_KEY' | translate }}
             </h2>
-            <p class="black-color">
+            <p class="">
                 {{'PRIVATE_KEY_SUBTITLE' | translate }}
             </p>
 
             <ion-list id="private-key-list">
-                <ion-item id="password-input" *ngIf='!common.privateKey'>
+                <ion-item id="password-input" *ngIf='!common.privateKey' style="background:black;color:white;">
                     <ion-label>
                         {{'PASSWORD' | translate }}
                     </ion-label>

@@ -1,5 +1,5 @@
 <ion-header>
-    <ion-navbar color="light">
+    <ion-navbar color="dark">
         <button ion-button menuToggle>
             <ion-icon name="menu"></ion-icon>
         </button>
@@ -8,18 +8,18 @@
         </ion-title>
     </ion-navbar>
 </ion-header>
-<ion-content id="contact-update" padding >
+<ion-content id="contact-update" padding > 
     <div class="default-padding">
 
         <form (ngSubmit)="saveContact()">
-            <ion-item id="name-input">
+            <ion-item id="name-input"  style="background:black;color:white;">
                 <ion-label stacked>
                     {{'NAME' | translate}}
                 </ion-label>
                 <ion-input type="text" name="name" placeholder="" [(ngModel)]="name"></ion-input>
             </ion-item>
 
-            <ion-item id="contact-input">
+            <ion-item id="contact-input"  style="background:black;color:white;">
                 <ion-label stacked>
                     {{'CONTACT_ADDRESS' | translate}}
                 </ion-label>

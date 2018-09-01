@@ -14,6 +14,7 @@ import {AccountPage} from '../pages/account/account';
 import {TransactionsPage} from '../pages/transactions/transactions';
 import {BalancePage} from '../pages/balance/balance';
 import {LoginPage} from '../pages/login/login';
+import {WelcomePage} from '../pages/welcome/welcome';
 import {ContactListPage} from '../pages/contact/list/list';
 
 import {Network} from '@ionic-native/network';
@@ -24,7 +25,7 @@ import {Network} from '@ionic-native/network';
 })
 export class MyApp {
     @ViewChild(Nav) navCtrl: Nav;
-    rootPage: any = LoginPage;
+    rootPage: any = WelcomePage;
     version: string = "";
 
     constructor(private platform: Platform, private statusBar: StatusBar, private splashScreen: SplashScreen, private network: Network, private alert: AlertProvider,  private contact: ContactProvider, private language: LanguageProvider, private sqlite: SQLite, private appVersion: AppVersion) {

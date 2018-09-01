@@ -1,0 +1,69 @@
+page-welcome{
+  
+  #welcome{
+    //   background:blue;
+    //   color:white;
+    // background-color: red !important;
+    // position: relative;
+  }
+  
+  #login-btn{
+    position: absolute;
+    top:70%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+  }
+
+  #sign-btn{
+    position: absolute;
+    top:80%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+  }
+
+  #image-icon{
+    position: absolute;
+    top:25%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+  }
+
+.cover 
+{ 
+    background-color: RGBA(12, 11, 11, 0.7);
+    background-origin: content-box;
+    z-index: 8;
+    min-height: 100vh;
+  
+  
+}
+
+.cover-text{
+  position: absolute;
+  top:40%;
+  
+  
+}
+
+ion-header {
+  .toolbar {
+    position: absolute;
+
+     .toolbar-background {
+      background: transparent;
+    }
+    .toolbar-title { 
+      color: white;
+      margin-left:15%;
+    }
+  }
+}
+
+ion-icon{
+
+}
+
+}

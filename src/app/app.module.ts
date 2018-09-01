@@ -31,7 +31,8 @@ import {FormatLevyPipe} from '../pipes/format-levy.pipe';
 import {FormatXEMPipe} from "../pipes/format-XEM";
 import {SearchContactPipe} from '../pipes/search-contact.pipe';
 
-import {MyApp} from './app.component';
+import { MyApp } from './app.component';
+import {WelcomePage} from '../pages/welcome/welcome';
 import {BalancePage} from '../pages/balance/balance';
 import {TransactionsPage} from '../pages/transactions/transactions';
 import {TransferPage} from '../pages/transfer/transfer';
@@ -73,6 +74,7 @@ export function createTranslateLoader(http: Http) {
         AccountPage,
         LoginPage,
         SignupPage,
+        WelcomePage,
         SignupSimpleWalletPage,
         SignupPrivateKeyPage,
         TransactionsConfirmedPage,
@@ -117,6 +119,7 @@ export function createTranslateLoader(http: Http) {
         AccountPage,
         LoginPage,
         SignupPage,
+        WelcomePage,
         SignupSimpleWalletPage,
         SignupPrivateKeyPage,
     ],

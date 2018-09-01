@@ -2,4 +2,24 @@ page-login {
   .waves{
     width:100%; position: absolute; left: 0px; bottom: 0px;
   }
+
+  #login{
+     background:black;
+  }
+
+  #title{
+    color:white;
+  }
+  .item .item-content
+  {
+   background-color: transparent !important;
+  }
+  #coin-icon{  
+    position: absolute;
+    top:20%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+  }
+
 }

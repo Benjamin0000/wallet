@@ -1,15 +1,23 @@
 <ion-header>
-</ion-header>
-<ion-content id="login" padding>
+        <ion-navbar color="dark">
+                <ion-title>
+                    {{'LOGIN' | translate}}
+                </ion-title>
+            </ion-navbar>
+</ion-header> 
+<ion-content id="login" padding >
     <div class="default-padding">
+            <div id="coin-icon">
+              <img src="assets/img/logo.png" alt="airx logo" width="100">
+            </div>
         <div class="text-center">
             <div class="spacer m"></div>
-            <h1 [innerHTML]="'APP_TITLE' | translate"></h1>
+            <h1 [innerHTML]="'APP_TITLE' | translate" id="title"></h1>
         </div>
         <div class="spacer m"></div>
         <ion-list>
 
-            <ion-item>
+            <ion-item  style="background:black;color:white;">
                 <ion-label>
                     {{'ACCOUNT' | translate}}
                 </ion-label>
@@ -24,7 +32,7 @@
         <form (ngSubmit)="login()">
             <ion-list>
 
-                <ion-item>
+                <ion-item  style="background:black;color:white;">
                     <ion-label>
                         {{'PASSWORD' | translate}}
                     </ion-label>
@@ -41,7 +49,7 @@
         <button ion-button clear color="positive" block on-click="goToSignup()">
             {{'CREATE_OR_IMPORT_AN_ACCOUNT' | translate}}
         </button>
+
     </div>
 </ion-content>
 
-<img src="assets/img/waves.png" class="waves"/>
